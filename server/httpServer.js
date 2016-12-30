@@ -2,6 +2,7 @@
 
 var config = require('./config');
 var express = require('express');
+var postService = require('./service/blogPostService');
 var bodyParser = require('body-parser');
 var app = express();
 var websockets = require('./service/websocketService');
@@ -23,10 +24,33 @@ module.exports.startServer = function() {
 	app.use(express.static(__dirname + '/../'));
 	app.use(bodyParser.json());
 
+	app.get('/posts', function(req, res) {
+		res.setHeader('content-type', 'application/json');
+		var requestParameters = req.body;
+		var requestedNumberOfPosts;
+		var olderThanPostId;
+		if (requestParameters.olderThanPostId) {
+			olderThanPostId = requestParameters.olderThanPostId;
+		}
+		if (requestParameters.requestedNumberOfPosts) {
+			requestedNumberOfPosts = requestParameters.requestedNumberOfPosts;
+		}
+		else {
+			requestedNumberOfPosts = 5;
+		}
+		postService.findPosts(
+			requestedNumberOfPosts,
+			function (posts) {
+				res.send(posts);
+			}, 
+			olderThanPostId
+		);
+	});
+
 	// Handle requests for web pages.
 	app.get('/*', function (req, res) {
-		
-		res.setHeader('content-type', 'text/html');
+		res.sendFile('app/index.html' , { root : __dirname + "/../"});		
+		/*res.setHeader('content-type', 'text/html');
 		// If request is not from a HTML Prerendering Server, but a client,
 		// forward the request to a Prerendering Server, which includes in index.html 
 		// the dynamic content for the requested page. Subsequent navigating will be through
@@ -74,8 +98,8 @@ module.exports.startServer = function() {
 		// If request is coming from HTML Prerender Server (PhantomJS), send index.html for rendering
 		else {
 			
-			res.sendFile('app/index.html' , { root : __dirname + "/../"});
-		}
+			
+		}*/
 	});
 
 	var server = app.listen(port, function () {

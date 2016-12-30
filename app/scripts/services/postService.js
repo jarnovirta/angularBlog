@@ -23,8 +23,13 @@ angular.module('jvdotcomApp')
                 if (Model.posts && Model.posts.length > 0) {
                     requestData.olderThanPostId = Model.posts[Model.posts.length - 1]._id;
                 }
-               
-                Websocket.send(topic, requestData, true).then(function (loadedPosts) {
+                
+                $http({
+                    url: 'http://' + window.location.host + '/posts',
+                    params: requestData
+                }
+                ).then(function (response) {
+                    var loadedPosts = response.data;
                     if (loadedPosts) {
                         if (loadedPosts.length < 5) {
                             morePostsOnServer = false;

@@ -1,0 +1,48 @@
+
+<div class="panel panel-info">
+	<div class="panel-heading">
+	    <span class="glyphicon glyphicon-wrench"></span>
+		Site services
+	</div>
+	<div class="panel-body">
+		<div cg-busy="loadSiteStatistics">
+			<table>
+				<tr>
+					<td>
+						<p>Load balancer :</p>
+					</td>
+					<td>
+						<p>{{ siteStatus.proxyServer.host }} <span ng-show="!siteStatus">Loading...</span></p>
+					</td>
+				</tr>
+				<tr>
+					<td style="vertical-align: top; width: 40%">
+						<p>Web servers online ({{ siteStatus.webServers.length }}) :</p>
+					</td>
+					<td style="width: 60%; vertical-align: top;"> 
+						<div ng-show="!siteStatus">
+							<p>&nbsp Loading...</p>
+						</div>
+						<div ng-show="siteStatus">
+							<p>{{ webServerIpList }}</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td style="vertical-align: top; width: 40%">
+						<p>User authentication servers online ({{ siteStatus.userAuthServers.length }}) :</p>
+					</td>
+					<td style="width: 60%; vertical-align: top;"> 
+						<div ng-show="!siteStatus">
+							<p>&nbsp Loading...</p>
+						</div>
+						<div ng-show="siteStatus">
+							<p>{{ userAuthServerIpList }}</p>
+						</div>
+					</td>
+				</tr>
+			
+			</table>
+		</div>
+	</div>
+</div>

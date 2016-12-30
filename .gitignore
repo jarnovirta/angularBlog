@@ -1,0 +1,8 @@
+/.tmp
+/angular-seo
+/bower_components
+/dist
+/log
+/node_modules
+/redis-stable
+/sourcemaps

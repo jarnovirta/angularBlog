@@ -1,0 +1,45 @@
+
+- admin-tilien hallinta
+- Seo:
+  	- Sitemap. https://support.google.com/webmasters/answer/156184
+- erota "update post" ja kommentointi toisistaan jotta ei tsekata kommentin kirjoittajan osalta admin statusta.
+- testit ja error handling, testaa proxyn toiminta
+- lokista tieto googlen käynneistä admin-näkymään.
+- Twitter-napista puuttuu linkki etusivulla.
+- admin controllerin siirto johti siihen että "admin" ei aina näy navbarissa vaikka on logged in.
+- mitä tapahtuu jos posteja ei heti ladata, näkyykö "Echo!..." teksti?
+
+	====== ohjelma "VALMIS" =====
+
+
+MYÖHEMMIN:
+- Sähköpostipalvelin
+- ääniefekti vain jos välilehti aktiivinen / korjaa muuten viiveellä tuleva viesti. Pyöriikö angular taustalla vaikka ei aktiivinen?
+- mongodb replica set
+
+- loki. Lokiin ja admin-näkymään tieto viimeisimmistä kaatumisista.
+
+- hakutoiminto navbariin
+
+- spostinotifikaatio kommenteista ja spostilista seuraajille
+- Edit function for admin for contact & about me pages. 
+
+- AWS Security group config ja koodit niin että toimii taas hajautettuna.
+
+- image preload ei toimi?
+
+- vierailijaliikenteestä graafi admin-sivulle
+- logger file rotation
+- admin-sivun ip-osoitteisiin portit mukaan.
+
+FIX BOWER DEPENDENCIES
+// Old dependencies: angular: "1.5.0-rc.0"
+// changed to fix problem with phantomjs which errored due 
+// to incompatible angularjs version for ng-animate.
+
+
+- Korjaa tekstieditori niin että se ei lisää <p> tägejä joka paikkaan. Kokeile vielä tinyMCE
+
+- kaksinkertaiset tekstieditointi modaalit (uusi posti ja muokkaus) jollain pois.
+
+- redis, seaport, mongo salasanat ja muu saitin turvaaminen

@@ -1,0 +1,15 @@
+
+SEO:
+	Predender:
+	- https://blog.nraboy.com/2014/11/prerender-angularjs-apps-boost-seo/
+	- https://scotch.io/tutorials/angularjs-seo-with-prerender-io
+
+UI:
+	- Bootstrap theme: http://startbootstrap.com/
+	- Busy-animation: https://github.com/cgross/angular-busy/blob/master/README.md
+	- Infinite scroll: https://github.com/sroze/ngInfiniteScroll
+	- textAngular editor: http://textangular.com/
+	- CSS hover effect: http://ianlunn.github.io/Hover/
+
+Angular:
+	- Angular best practices: https://github.com/mgechev/angularjs-style-guide

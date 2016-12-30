@@ -1,0 +1,26 @@
+
+<div class="panel panel-info">
+	<div class="panel-heading">
+	    <span class="glyphicon glyphicon-stats"></span>
+		Traffic
+	</div>
+	<div class="panel-body">
+		<div cg-busy="loadSiteStatistics">
+			<table>	
+				<tr>
+					<td style="width: 50%">
+						<p>Current visitors	:</p>
+					</td>
+					<td style="width: 50%"> 
+						<div ng-show="!siteStatus">
+							<p>&nbsp Loading...</p>
+						</div>
+						<div ng-show="siteStatus">
+							<p>{{ siteStatus.connectedWebClientsCount }}</p>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>

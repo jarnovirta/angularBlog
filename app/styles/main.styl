@@ -1,0 +1,269 @@
+/* CUSTOM CSS */
+html {
+    overflow-y: scroll; 
+}
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  padding: 0;
+  font-family: 'Avenir Black';
+  p {
+  font-size: 22px;
+  }
+
+}
+
+
+h1 {
+  font-size: 50px;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+  margin-top: 30px;
+  
+
+  h3 {
+      margin-top: 0;
+      margin-bottom: 0;
+      line-height: 40px;
+      padding-bottom: 19px;
+  }
+  h1 {
+    display: inline;
+  
+  }
+
+}
+
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+  p {
+    font-size: 18px;
+  }
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+  p + h4 {
+  margin-top: 28px;
+  }
+}
+
+
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+
+}
+
+                  
+/*                              *
+*                               *
+*         CUSTOM BLOG STYLES    *
+*                               *
+*                               */
+
+.blogPostPanel {
+  
+  margin-bottom: 200px;
+  a {
+    text-decoration: none;
+    
+    border: 1px solid lightgrey;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+}
+
+.blogPostListBox {
+  margin-bottom: 30px;
+  padding-left: 50px;
+  h2 {
+    font-size: 40px;
+    
+  }
+  p {
+    font-size: 20px;
+    
+  }
+}
+
+
+.modal-body {
+  font-size: 16px;
+}
+
+.blogPost .header {
+  margin-bottom: 0;
+}
+.blogPostBody > p {
+  padding-left: 50px;
+ 
+}
+.commentSection {
+  border-top: 1px solid lightgrey;
+  margin-top: 100px;
+  padding-top: 10px;
+  margin-bottom: 150px;
+  h3 {
+    font-size: 16px;
+    color: black;
+  }
+
+}
+
+.commentSectionHeading {
+  margin-bottom: 50px;
+  h2 {
+    font-size: 24px;
+    color: grey;
+    margin-top: 10px;
+    display: inline;
+  }
+  
+}
+
+.blogPostComment {
+  border-bottom: 1px solid lightgrey;
+  margin-left: 50px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  h4 {
+    font-size: 14px;
+    color: grey;
+  }
+}
+
+.customButtom {
+  margin-bottom: 15px;
+  display: inline;
+ }
+.postAndCommentInfoLine {
+
+  font-size: 18px;
+  color: grey;
+}
+.commentEditAndDeleteButtons {
+  margin: 10px 0 10px 0;
+}
+
+
+/* CSS EFFECTS  */
+
+  /* Shadow */
+.hvr-shadow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+}
+.hvr-shadow:hover, .hvr-shadow:focus, .hvr-shadow:active {
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+}
+
+/* Grow Shadow */
+.hvr-grow-shadow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow, transform;
+  transition-property: box-shadow, transform;
+}
+.hvr-grow-shadow:hover, .hvr-grow-shadow:focus, .hvr-grow-shadow:active {
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.socialMediaButtonsBg {
+  color: #A40B03;
+}
+
+.panel > .panel-heading {
+    background-image: none;
+    background-color: #615A64;
+    color: white;
+    font-size: 25px;
+    border-color: #534950;
+}
+.panel {
+  border-color: #534950;
+}
+/*
+.blogPostDialog {
+   width: 90%;
+   max-width: 1600px;
+   
+}
+.commentDialog {
+  width: 900px;
+  max-width: 800px;
+}*/

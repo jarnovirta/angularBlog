@@ -1,4 +1,4 @@
-# Jarno's MEAN, yet friendly blog site #
+# Angular Blog App #
 
 ## INSTALLATION: ##
 
